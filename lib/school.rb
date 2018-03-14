@@ -22,10 +22,9 @@ class School
   end
 
   def sort
-    new_hash = {}
-    @roster.each do |key, val|
-      new_hash[key] = val.sort
+    @roster.each_value do |val|
+      val.sort!
     end
-    new_hash
+    @roster
   end
 end
